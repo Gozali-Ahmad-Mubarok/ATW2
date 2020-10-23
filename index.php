@@ -20,7 +20,7 @@ $system_dir = __DIR__."/system";
 
 if (file_exists($system_dir.'/storage/framework/maintenance.php')) {
     require $system_dir.'/storage/framework/maintenance.php';
-};
+}
 
 /*
 |--------------------------------------------------------------------------
