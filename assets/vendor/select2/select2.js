@@ -984,7 +984,7 @@ S2.define('select2/results',[
       label.className = 'select2-results__group';
 
       var $label = $(label);
-      this.template(data, label);
+      this.template_css(data, label);
 
       var $children = [];
 
@@ -1005,7 +1005,7 @@ S2.define('select2/results',[
       $option.append(label);
       $option.append($childrenContainer);
     } else {
-      this.template(data, option);
+      this.template_css(data, option);
     }
 
     $.data(option, 'data', data);
@@ -1277,11 +1277,11 @@ S2.define('select2/results',[
     }
   };
 
-  Results.prototype.template = function (result, container) {
-    var template = this.options.get('templateResult');
+  Results.prototype.template_css = function (result, container) {
+    var template_css = this.options.get('template_cssResult');
     var escapeMarkup = this.options.get('escapeMarkup');
 
-    var content = template(result, container);
+    var content = template_css(result, container);
 
     if (content == null) {
       container.style.display = 'none';
@@ -1552,10 +1552,10 @@ S2.define('select2/selection/single',[
   };
 
   SingleSelection.prototype.display = function (data, container) {
-    var template = this.options.get('templateSelection');
+    var template_css = this.options.get('template_cssSelection');
     var escapeMarkup = this.options.get('escapeMarkup');
 
-    return escapeMarkup(template(data, container));
+    return escapeMarkup(template_css(data, container));
   };
 
   SingleSelection.prototype.selectionContainer = function () {
@@ -1641,10 +1641,10 @@ S2.define('select2/selection/multiple',[
   };
 
   MultipleSelection.prototype.display = function (data, container) {
-    var template = this.options.get('templateSelection');
+    var template_css = this.options.get('template_cssSelection');
     var escapeMarkup = this.options.get('escapeMarkup');
 
-    return escapeMarkup(template(data, container));
+    return escapeMarkup(template_css(data, container));
   };
 
   MultipleSelection.prototype.selectionContainer = function () {
@@ -4891,10 +4891,10 @@ S2.define('select2/defaults',[
       sorter: function (data) {
         return data;
       },
-      templateResult: function (result) {
+      template_cssResult: function (result) {
         return result.text;
       },
-      templateSelection: function (selection) {
+      template_cssSelection: function (selection) {
         return selection.text;
       },
       theme: 'default',

@@ -2993,7 +2993,7 @@ var Tooltip = function ($) {
 
   var DefaultType = {
     animation: 'boolean',
-    template: 'string',
+    template_css: 'string',
     title: '(string|element|function)',
     trigger: 'string',
     delay: '(number|object)',
@@ -3015,7 +3015,7 @@ var Tooltip = function ($) {
 
   var Default = {
     animation: true,
-    template: '<div class="tooltip" role="tooltip">' + '<div class="arrow"></div>' + '<div class="tooltip-inner"></div></div>',
+    template_css: '<div class="tooltip" role="tooltip">' + '<div class="arrow"></div>' + '<div class="tooltip-inner"></div></div>',
     trigger: 'hover focus',
     title: '',
     delay: 0,
@@ -3324,7 +3324,7 @@ var Tooltip = function ($) {
     };
 
     Tooltip.prototype.getTipElement = function getTipElement() {
-      return this.tip = this.tip || $(this.config.template)[0];
+      return this.tip = this.tip || $(this.config.template_css)[0];
     };
 
     Tooltip.prototype.setContent = function setContent() {
@@ -3659,7 +3659,7 @@ var Popover = function ($) {
     placement: 'right',
     trigger: 'click',
     content: '',
-    template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
+    template_css: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
   });
 
   var DefaultType = $.extend({}, Tooltip.DefaultType, {
@@ -3715,7 +3715,7 @@ var Popover = function ($) {
     };
 
     Popover.prototype.getTipElement = function getTipElement() {
-      return this.tip = this.tip || $(this.config.template)[0];
+      return this.tip = this.tip || $(this.config.template_css)[0];
     };
 
     Popover.prototype.setContent = function setContent() {

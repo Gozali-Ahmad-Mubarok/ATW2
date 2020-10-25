@@ -5680,7 +5680,7 @@
                 "nikic/php-parser": "^4.8",
                 "php": ">=7.3",
                 "phpunit/php-file-iterator": "^3.0.3",
-                "phpunit/php-text-template": "^2.0.2",
+                "phpunit/php-text-template_css": "^2.0.2",
                 "sebastian/code-unit-reverse-lookup": "^2.0.2",
                 "sebastian/complexity": "^2.0",
                 "sebastian/environment": "^5.1.2",
@@ -5848,16 +5848,16 @@
             "time": "2020-09-28T05:58:55+00:00"
         },
         {
-            "name": "phpunit/php-text-template",
+            "name": "phpunit/php-text-template_css",
             "version": "2.0.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/sebastianbergmann/php-text-template.git",
+                "url": "https://github.com/sebastianbergmann/php-text-template_css.git",
                 "reference": "18c887016e60e52477e54534956d7b47bc52cd84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-text-template/zipball/18c887016e60e52477e54534956d7b47bc52cd84",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-text-template_css/zipball/18c887016e60e52477e54534956d7b47bc52cd84",
                 "reference": "18c887016e60e52477e54534956d7b47bc52cd84",
                 "shasum": ""
             },
@@ -5889,10 +5889,10 @@
                     "role": "lead"
                 }
             ],
-            "description": "Simple template engine.",
-            "homepage": "https://github.com/sebastianbergmann/php-text-template/",
+            "description": "Simple template_css engine.",
+            "homepage": "https://github.com/sebastianbergmann/php-text-template_css/",
             "keywords": [
-                "template"
+                "template_css"
             ],
             "funding": [
                 {
@@ -5987,7 +5987,7 @@
                 "phpunit/php-code-coverage": "^9.2",
                 "phpunit/php-file-iterator": "^3.0.5",
                 "phpunit/php-invoker": "^3.1.1",
-                "phpunit/php-text-template": "^2.0.3",
+                "phpunit/php-text-template_css": "^2.0.3",
                 "phpunit/php-timer": "^5.0.2",
                 "sebastian/cli-parser": "^1.0.1",
                 "sebastian/code-unit": "^1.0.6",

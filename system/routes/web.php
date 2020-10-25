@@ -48,6 +48,22 @@ Route::get('/home',function(){
 Route::get('/it_shop_detail',function(){
 	return view("it_shop_detail");
 });
+
 Route::get('/it_card',function(){
 	return view("it_card");
+});
+
+Route::get('/template',function(){
+	return view("template.base");
+});
+
+Route::get('/beranda',function(){
+	return view("beranda");
+});
+Route::get('/kategori',function(){
+	return view("kategori");
+});
+
+Route::get('/produk',function(){
+	return view("produk");
 });

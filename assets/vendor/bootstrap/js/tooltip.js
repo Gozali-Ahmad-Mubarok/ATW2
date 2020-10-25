@@ -92,7 +92,7 @@ var DEFAULT_OPTIONS = {
   html: false,
   placement: 'top',
   title: '',
-  template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
+  template_css: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
   trigger: 'hover focus',
   offset: 0
 };
@@ -113,7 +113,7 @@ var Tooltip = function () {
    *      Object structure is: `{ show: 500, hide: 100 }`
    * @param {Boolean} options.html=false - Insert HTML into the tooltip. If false, the content will inserted with `innerText`.
    * @param {String|PlacementFunction} options.placement='top' - One of the allowed placements, or a function returning one of them.
-   * @param {String} [options.template='<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>']
+   * @param {String} [options.template_css='<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>']
    *      Base HTML to used when creating the tooltip.
    *      The tooltip's `title` will be injected into the `.tooltip-inner` or `.tooltip__inner`.
    *      `.tooltip-arrow` or `.tooltip__arrow` will become the tooltip's arrow.
@@ -208,15 +208,15 @@ var Tooltip = function () {
      * @memberof Tooltip
      * @private
      * @param {HTMLElement} reference
-     * @param {String} template
+     * @param {String} template_css
      * @param {String|HTMLElement|TitleFunction} title
      * @param {Boolean} allowHtml
      * @return {HTMLelement} tooltipNode
      */
-    value: function _create(reference, template, title, allowHtml) {
+    value: function _create(reference, template_css, title, allowHtml) {
       // create tooltip element
       var tooltipGenerator = window.document.createElement('div');
-      tooltipGenerator.innerHTML = template.trim();
+      tooltipGenerator.innerHTML = template_css.trim();
       var tooltipNode = tooltipGenerator.childNodes[0];
 
       // add unique ID to our tooltip (needed for accessibility reasons)
@@ -268,7 +268,7 @@ var Tooltip = function () {
       }
 
       // create tooltip node
-      var tooltipNode = this._create(reference, options.template, title, options.html);
+      var tooltipNode = this._create(reference, options.template_css, title, options.html);
 
       // Add `aria-describedby` to our reference element for accessibility reasons
       reference.setAttribute('aria-describedby', tooltipNode.id);
