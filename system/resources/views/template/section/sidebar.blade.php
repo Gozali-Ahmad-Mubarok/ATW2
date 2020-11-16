@@ -9,7 +9,7 @@
         <div class="nalika-profile">
             <div class="profile-dtl">
                 <a href="#"><img src="img/notification/4.jpg" alt="" /></a>
-                <h2>Lakian <span class="min-dtn">Das</span></h2>
+                <h2>- <span class="min-dtn">-</span></h2>
             </div>
         </div>
         <div class="left-custom-menu-adp-wrap comment-scrollbar">
@@ -23,6 +23,9 @@
                     </li>
                     <li class="">
                         <a href="{{url('kategori')}}"> <span>kategori</span></a>  
+                    </li>
+                    <li class="">
+                        <a href="{{url('user')}}"> <span>user</span></a>  
                     </li>
                 </ul>
             </nav>

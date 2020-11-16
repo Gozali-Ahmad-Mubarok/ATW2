@@ -57,6 +57,25 @@
                   <a href="{{url("/home")}}">Home</a>
                 </li>
                 <li>
+                  <a href="#">Produk</a>
+                </li>
+                {{--  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" target="_blank">Data<span class="caret"></span></a>  --}}
+                  <ul class="dropdown-menu">
+                  <li >
+                      <a href="mobil.php">Mahasiswa</a>
+                  </li>
+                  <li >
+                      <a href="dosen.php">Dosen</a>
+                  </li>
+                  <li>
+                      <a href="matakuliah.php">Matakuliah</a>
+                  </li>                 
+                   <li>
+                      <a href="ruangan.php">Ruangan</a>
+                  </li>
+                        </ul>
+                  </li>
+                <li>
                   <a href="{{url("/it_card")}}">Shopping card </a>
                 </li>
                 <li>

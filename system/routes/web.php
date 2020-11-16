@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\produkcontroller;
+use App\Http\Controllers\Usercontroller;
+use App\Http\Controllers\kategoricontroller;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,53 +21,35 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/informatika',function(){
-	return view("informatika");
-});
+Route::get('beranda', [HomeController::class, 'showberanda']);
+Route::get('UserProduk', [HomeController::class, 'showberanda']);
+Route::get('register',  [AuthController::class, 'showregister']);
+Route::get('home',  [HomeController::class, 'showhome']);
+Route::get('UserProduk/{UserProduk}',  [HomeController::class, 'showhome']);
+Route::get('it_shop_detail', [HomeController::class, 'showit_shop_detail']);
+Route::get('it_card', [HomeController::class, 'showit_card']);
+Route::get('template.base',  [HomeController::class, 'showtemplate.base']);
+Route::get('kategori', [HomeController::class, 'showkategori'] );
 
-Route::get('/elektro',function(){
-	return view("elektro");
-});
 
-Route::get('/sipil',function(){
-	return view("sipil");
-});
+Route::get('produk', [produkcontroller::class, 'index']);
+Route::get('produk/create', [produkcontroller::class, 'create']);
+Route::post('produk', [produkcontroller::class, 'store']); 
+Route::get('produk/{produk}', [produkcontroller::class, 'show']);  
+Route::get('produk/{produk}/edit', [produkcontroller::class, 'edit']); 
+Route::put('produk/{produk}', [produkcontroller::class, 'update']);  
+Route::delete('produk/{produk}', [produkcontroller::class, 'destroy']); 
 
-Route::get('/mesin',function(){
-	return view("mesin");
-});
 
-Route::get('/Login',function(){
-	return view("Login");
-});
+Route::resource('user', UserController::class);
+Route::resource('kategori', kategoricontroller::class);
 
-Route::get('/register',function(){
-	return view("register");
-});
 
-Route::get('/home',function(){
-	return view("home");
-});
+Route::get('users', [usercontroller::class, 'index']); 
+Route::post('users', [usercontroller::class, 'store']); 
+Route::get('users/{user}', [usercontroller::class, 'show']);   
 
-Route::get('/it_shop_detail',function(){
-	return view("it_shop_detail");
-});
-
-Route::get('/it_card',function(){
-	return view("it_card");
-});
-
-Route::get('/template',function(){
-	return view("template.base");
-});
-
-Route::get('/beranda',function(){
-	return view("beranda");
-});
-Route::get('/kategori',function(){
-	return view("kategori");
-});
-
-Route::get('/produk',function(){
-	return view("produk");
-});
+Route::get('Login', [AuthController::class, 'showLogin']);
+Route::post('Login', [AuthController::class, 'LoginProcess']);
+Route::get('logout', [AuthController::class, 'logout']);
+ 
