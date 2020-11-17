@@ -25,7 +25,7 @@ Route::get('beranda', [HomeController::class, 'showberanda']);
 Route::get('UserProduk', [HomeController::class, 'showberanda']);
 Route::get('register',  [AuthController::class, 'showregister']);
 Route::get('home',  [HomeController::class, 'showhome']);
-Route::get('UserProduk/{UserProduk}',  [HomeController::class, 'showhome']);
+// Route::get('UserProduk/{UserProduk}',  [HomeController::class, 'showhome']);
 Route::get('it_shop_detail', [HomeController::class, 'showit_shop_detail']);
 Route::get('it_card', [HomeController::class, 'showit_card']);
 Route::get('template.base',  [HomeController::class, 'showtemplate.base']);
@@ -52,4 +52,10 @@ Route::get('users/{user}', [usercontroller::class, 'show']);
 Route::get('Login', [AuthController::class, 'showLogin']);
 Route::post('Login', [AuthController::class, 'LoginProcess']);
 Route::get('logout', [AuthController::class, 'logout']);
+
+Route::get('register', [AuthController::class, 'showregister']);
+Route::post('register', [AuthController::class, 'storeregister']);
+
  
+Route::get('home', [HomeController::class, 'showhome']);
+Route::get('it_shop_detail/{it_shop_detail}', [HomeController::class, 'showit_shop_detail']); 

@@ -45,7 +45,7 @@
       <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
           <!-- logo start --> 
-          <div class="logo"> <a href="it_home.html"><img src="images/logos/it_logo.png" alt="logo" /></a> </div>
+          <div class="logo"> <a href="#"><img src="images/logos/it_logo.png" alt="logo" /></a> </div>
           <!-- logo end -->
         </div>
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
@@ -56,23 +56,15 @@
                 <li>
                   <a href="{{url("/home")}}">Home</a>
                 </li>
-                <li>
-                  <a href="#">Produk</a>
-                </li>
-                {{--  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" target="_blank">Data<span class="caret"></span></a>  --}}
+                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" target="_blank">Kategori<span class="caret"></span></a> 
                   <ul class="dropdown-menu">
-                  <li >
-                      <a href="mobil.php">Mahasiswa</a>
-                  </li>
-                  <li >
-                      <a href="dosen.php">Dosen</a>
-                  </li>
-                  <li>
-                      <a href="matakuliah.php">Matakuliah</a>
-                  </li>                 
-                   <li>
-                      <a href="ruangan.php">Ruangan</a>
-                  </li>
+                    @foreach ($list_kategori as $kategori)
+                    <li>
+                      <div class="aa-cartbox-info">
+                      <a href="{{url("it_shop_detail")}}">{{$kategori->nama}}</a>
+                      </div>
+                    </li>
+                    @endforeach
                         </ul>
                   </li>
                 <li>
@@ -105,7 +97,7 @@
             <div class="title-holder-cell text-left">
               <h1 class="page-title">Shop Detail</h1>
               <ol class="breadcrumb">
-                <li class="active"><a href="index.html">Home</a></li>
+                <li class="active"><a href="#">Home</a></li>
               </ol>
             </div>
           </div>
@@ -128,70 +120,21 @@
       </div>
     </div>
     <div class="row">
+      @foreach ($list_produk as $produk)
       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
         <div class="product_list">
-          <div class="product_img"> <img class="img-responsive" src="images/it_service/1.jpg" alt=""> </div>
+          <div class="product_img" href={{url("/it_shop_detail", $produk->id)}}> <img class="img-responsive" src="images/it_service/1.jpg" alt=""> </div>
           <div class="product_detail_btm">
             <div class="center">
-              <h4><a href="{{url("/it_shop_detail")}}">Norton Internet Security</a></h4>
-            </div>
-            <div class="starratin">
-              <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
+              <h4><a href="{{url("/it_shop_detail")}}">{{$produk->nama}}</a></h4>
             </div>
             <div class="product_price">
-              <p><span class="old_price">$15.00</span> – <span class="new_price">$25.00</span></p>
+              <p><a href="{{url("/it_shop_detail")}}">Rp.{{$produk->harga}}</a></p>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
-        <div class="product_list">
-          <div class="product_img"> <img class="img-responsive" src="images/it_service/2.jpg" alt=""> </div>
-          <div class="product_detail_btm">
-            <div class="center">
-              <h4><a href="{{url("/it_shop_detail")}}">Kaspersky Internet Security</a></h4>
-            </div>
-            <div class="starratin">
-              <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-            </div>
-            <div class="product_price">
-              <p><span class="old_price">$24.99</span><span class="new_price"> $12.49</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
-        <div class="product_list">
-          <div class="product_img"> <img class="img-responsive" src="images/it_service/3.jpg" alt=""> </div>
-          <div class="product_detail_btm">
-            <div class="center">
-              <h4><a href="{{url("/it_shop_detail")}}">Mcafee Livesafe Antivirus</a></h4>
-            </div>
-            <div class="starratin">
-              <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-            </div>
-            <div class="product_price">
-              <p><span class="old_price">$24.99</span><span class="new_price"> $12.49</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
-        <div class="product_list">
-          <div class="product_img"> <img class="img-responsive" src="images/it_service/4.jpg" alt=""> </div>
-          <div class="product_detail_btm">
-            <div class="center">
-              <h4><a href="{{url("/it_shop_detail")}}">Norton Internet Security</a></h4>
-            </div>
-            <div class="starratin">
-              <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-            </div>
-            <div class="product_price">
-              <p><span class="old_price">$15.00</span> – <span class="new_price">$25.00</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
+      @endforeach
     </div>
 </div>
 <!-- end section -->

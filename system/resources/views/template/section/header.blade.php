@@ -22,7 +22,11 @@
                                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                                     <i class="icon nalika-user"> <img src="" alt=""></i>
                                                     <span class="admin-name"> 
-                                                       gozali ahmad
+                                                        @if(Auth::check())
+                                                        {{request()->user()->nama}}
+                                                        @else
+                                                        silahkan login
+                                                        @endif
                                                     </span>
                                                     <i class="icon nalika-down-arrow nalika-angle-dw"></i>
                                                 </a>

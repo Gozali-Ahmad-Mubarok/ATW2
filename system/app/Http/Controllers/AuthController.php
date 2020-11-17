@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers; 
 use Auth;
+use App\Models\User;
+use App\Models\produk;
+use App\Models\kategori;
 
 class AuthController extends Controller{
 
@@ -17,13 +20,22 @@ function showLogin(){
         }
     }
     function logout(){
+        
         Auth::logout();
         return redirect('home');        
     }
 
-    function register(){
-        auth:: register();
-        return redirect('registrasi');
+    function showregister(){
+        return view('register');
     }
+    function storeregister(){
+        $user =  new User; 
+        $user->username =  request('username');
+        $user->email =  request('email');
+        $user->nama =  request('nama'); 
+        $user->password =  request('password');
+        $user->save(); 
 
+    return redirect('Login')->with('success', 'data berhasil di tambahkan');                
+}
 }

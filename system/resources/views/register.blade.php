@@ -15,37 +15,34 @@
 <body>
 	
 	<div class="limiter">
+		@include('template.utils.notif') 
 		<div class="container-login100">
 			<div class=" container wrap-login100">
-				<form class="login100-form validate-form">
-					
-					<span class="login100-form-title">
+					<form action="{{url('register')}}" class="login100-form validate-form" method="POST">
+                        @csrf <span class="login100-form-title">
 						Register
 					</span>
-
-					<div class="wrap-input100 ">
-						<input class="input100" type="text" name="nama" placeholder="nama">
-						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
-						</span>
-					</div>
-					<div class="wrap-input100 ">
-						<input class="input100" type="test" name="email" placeholder="goza123@gmail.com">
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
-					<div class="wrap-input100 ">
-						<input class="input100" type="password" name="pass" placeholder="Password">
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
 					
-					<div class="container-login100-form-btn">
-						<a class="login100-form-btn"href="{{url("/Login")}}">create</a>
+					<div class="wrap-input100 ">
+						<input class="input100 form-control" type="text" name="username" placeholder="username">
 					</div>
-
+					<div class="wrap-input100 ">
+						<input class="input100 form-control" type="email" name="email" placeholder="goza123@gmail.com">
+					</div>
+					<div class="wrap-input100 ">
+						<input class="input100 form-control" type="text" name="nama" placeholder="nama pengguna">
+					</div>
+					<div class="wrap-input100 ">
+						<input class="input100 form-control" type="password" name="password" placeholder="Password">
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div> 
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn"> 
+							Registrasi
+						</button> 
+					</div>  
 					<div class="text-center p-t-10">
 						<p class="message">Sudah Memiliki Akun? <a href="{{url("/Login")}}">Login</a></p>
 					</div>
