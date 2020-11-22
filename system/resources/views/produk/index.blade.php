@@ -38,7 +38,7 @@
                     <div class="card">
                         <div class="card-header">
                             data produk
-                            <a href="{{url('kategori/create')}}" class="btn btn-dark float-right" ><i class="fa fa-plus"></i> tambah data</a>
+                            <a href="{{url('produk/create')}}" class="btn btn-dark float-right" ><i class="fa fa-plus"></i> tambah data</a>
                         </div> 
                         <div class="card-body">
                             <table class="table">

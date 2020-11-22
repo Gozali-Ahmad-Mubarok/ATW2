@@ -15,6 +15,10 @@
                         {{ "@".$user->username }} |
                         email : {{$user->email}} 
                     </p> 
+                </
+                <p>
+                    No Hanphone : {{$user->detail->no_hp}} 
+                </p> 
                 </div>
             </div>
         </div>

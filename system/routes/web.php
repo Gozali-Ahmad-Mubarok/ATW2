@@ -45,13 +45,13 @@ Route::delete('produk/{produk}', [produkcontroller::class, 'destroy']);
 Route::resource('user', UserController::class);
 Route::resource('kategori', kategoricontroller::class); 
 Route::post('produk/filter',[produkcontroller:: class, 'filter']);
-Route::post('home',[userprodukcontroller:: class, 'filter']);
+Route::post('home/filter',[userprodukcontroller:: class, 'filter']);
 
 
 
-Route::get('users', [usercontroller::class, 'index']); 
-Route::post('users', [usercontroller::class, 'store']); 
-Route::get('users/{user}', [usercontroller::class, 'show']);   
+Route::get('user', [usercontroller::class, 'index']); 
+Route::post('user', [usercontroller::class, 'store']); 
+Route::get('user/{user}', [usercontroller::class, 'show']);   
 
 Route::get('Login', [AuthController::class, 'showLogin']);
 Route::post('Login', [AuthController::class, 'LoginProcess']);
