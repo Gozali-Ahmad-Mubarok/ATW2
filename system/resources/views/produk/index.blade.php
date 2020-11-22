@@ -12,12 +12,8 @@
                             <form action="{{url('produk/filter')}}" method="POST">
                             @csrf
                             <div class="form-group">
-                                <label for="" class="control-label"> Nama Tunggal</label>
+                                <label for="" class="control-label"> Nama</label>
                                 <input type="text" class="form-control" name="nama" value="{{$nama ??""}}"></input>
-                            </div>
-                            <div class="form-group">
-                                <label for="" class="control-label"> Stok </label>
-                                <input type="text" class="form-control" name="stok" value="{{$stok ??""}}"></input>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">

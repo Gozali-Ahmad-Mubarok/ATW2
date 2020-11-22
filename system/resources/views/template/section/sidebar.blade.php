@@ -4,11 +4,11 @@
             <hr>
             <h3 href="#"><img class="main-logo" alt="" /> Perkom</h3>
             <hr>
-            <strong><img src="img/logo/logosn.png" alt="" /></strong>
+            <strong><img src="{{url("public")}}/img/logo/logosn.png" alt="" /></strong>
         </div>
         <div class="nalika-profile">
             <div class="profile-dtl">
-                <a href="#"><img src="img/notification/4.jpg" alt="" /></a>
+                <a href="#"><img src="{{url("public")}}/img/notification/4.jpg" alt="" /></a>
                 <h2>- <span class="min-dtn">-</span></h2>
             </div>
         </div>

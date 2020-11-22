@@ -15,19 +15,19 @@
 <!-- site icons -->
 <link rel="icon" href="images/fevicon/fevicon.png" type="image/gif" />
 <!-- bootstrap css -->
-<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="{{url('public')}}/assets/css/bootstrap.min.css" />
 <!-- Site css -->
-<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="{{url('public')}}/assets/css/style.css" />
 <!-- responsive css -->
-<link rel="stylesheet" href="assets/css/responsive.css" />
+<link rel="stylesheet" href="{{url('public')}}/assets/css/responsive.css" />
 <!-- colors css -->
-<link rel="stylesheet" href="assets/css/colors1.css" />
+<link rel="stylesheet" href="{{url('public')}}/assets/css/colors1.css" />
 <!-- custom css -->
-<link rel="stylesheet" href="assets/css/custom.css" />
+<link rel="stylesheet" href="{{url('public')}}/assets/css/custom.css" />
 <!-- wow Animation css -->
-<link rel="stylesheet" href="assets/css/animate.css" />
+<link rel="stylesheet" href="{{url('public')}}/assets/css/animate.css" />
 <!-- zoom effect -->
-<link rel='stylesheet' href='assets/css/hizoom.css'>
+<link rel='stylesheet' href='{{url('public')}}/assets/css/hizoom.css'>
 <!-- end zoom effect -->
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -91,8 +91,7 @@
 <div class="section padding_layout_1 product_detail">
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
-        <div class="row">
+      <div class="col-md-12"> 
           <div class="col-xl-6 col-lg-12 col-md-12">
             <div class="product_detail_feature_img hizoom hi2">
               <div class='hizoom hi2'> <img src="images/it_service/1.jpg" alt="#" /> </div>
@@ -133,16 +132,16 @@
 
 <!-- end footer -->
 <!-- js section -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="{{url('public')}}/assets/js/jquery.min.js"></script>
+<script src="{{url('public')}}/assets/js/bootstrap.min.js"></script>
 <!-- menu js -->
-<script src="assets/js/menumaker.js"></script>
+<script src="{{url('public')}}/assets/js/menumaker.js"></script>
 <!-- wow animation -->
 <script src="asssets/js/wow.js"></script>
 <!-- custom js -->
-<script src="assets/js/custom.js"></script>
+<script src="{{url('public')}}/assets/js/custom.js"></script>
 <!-- zoom effect -->
-<script src='assets/js/hizoom.js'></script>
+<script src='{{url('public')}}/assets/js/hizoom.js'></script>
 <script>
         $('.hi1').hiZoom({
             width: 300,

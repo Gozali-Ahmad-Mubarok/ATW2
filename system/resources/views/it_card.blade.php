@@ -15,19 +15,19 @@
 <!-- site icons -->
 <link rel="icon" href="images/fevicon/fevicon.png" type="image/gif" />
 <!-- bootstrap css -->
-<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="{{url('public')}}/assets/css/bootstrap.min.css" />
 <!-- Site css -->
-<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="{{url('public')}}/assets/css/style.css" />
 <!-- responsive css -->
-<link rel="stylesheet" href="assets/css/responsive.css" />
+<link rel="stylesheet" href="{{url('public')}}/assets/css/responsive.css" />
 <!-- colors css -->
-<link rel="stylesheet" href="assets/css/colors1.css" />
+<link rel="stylesheet" href="{{url('public')}}/assets/css/colors1.css" />
 <!-- custom css -->
-<link rel="stylesheet" href="assets/css/custom.css" />
+<link rel="stylesheet" href="{{url('public')}}/assets/css/custom.css" />
 <!-- wow Animation css -->
-<link rel="stylesheet" href="assets/css/animate.css" />
+<link rel="stylesheet" href="{{url('public')}}/assets/css/animate.css" />
 <!-- zoom effect -->
-<link rel='stylesheet' href='assets/css/hizoom.css'>
+<link rel='stylesheet' href='{{url('public')}}/assets/css/hizoom.css'>
 <!-- end zoom effect -->
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>

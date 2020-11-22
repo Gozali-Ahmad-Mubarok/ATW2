@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\produkcontroller;
+use App\Http\Controllers\userprodukcontroller;
 use App\Http\Controllers\Usercontroller;
 use App\Http\Controllers\kategoricontroller;
 use Illuminate\Support\Facades\Auth;
@@ -41,11 +42,10 @@ Route::get('produk/{produk}/edit', [produkcontroller::class, 'edit']);
 Route::put('produk/{produk}', [produkcontroller::class, 'update']);  
 Route::delete('produk/{produk}', [produkcontroller::class, 'destroy']); 
 
-
-
 Route::resource('user', UserController::class);
 Route::resource('kategori', kategoricontroller::class); 
 Route::post('produk/filter',[produkcontroller:: class, 'filter']);
+Route::post('home',[userprodukcontroller:: class, 'filter']);
 
 
 
