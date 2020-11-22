@@ -40,9 +40,30 @@ class produkcontroller extends Controller{
 
         return redirect('produk') ->with('success', 'data berhasil di edit');
     }
+    
     function destroy(produk $produk){
             $produk->delete();
-
             return redirect('produk') ->with('danger', 'data berhasil di hapus');
+    }
+
+// cari item menggunakan nama
+    // function filter(){
+    //     $nama = request('nama');
+    //     $data['list_produk'] = produk::where('nama', 'like',"%$nama%")->get(); 
+    //     $data['nama'] = $nama;
+    //     return view('produk.index', $data);
+    // }
+// end
+
+    function filter(){
+        $nama = request('nama');
+        $stok = explode(",", request('stok'));
+        $data['harga_min'] = $harga_min = request('harga_min');
+        $data['harga_max'] = $harga_max = request('harga_max');
+        // $data['list_produk'] = produk::where('nama', 'like',"%$nama%")->get(); 
+        // $data['list_produk'] = produk::whereIn('stok',$stok)->get();
+        $data['list_produk'] = produk::whereBetween('harga', [$harga_min, $harga_max])->get();
+        $data['nama'] = $nama;
+        return view('produk.index', $data);
     }
 }

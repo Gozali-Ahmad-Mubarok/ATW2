@@ -6,6 +6,41 @@
                 <div class="col-md-12 mt-5">
                     <div class="card">
                         <div class="card-header">
+                            Filter
+                        </div>
+                        <div class="card-body">
+                            <form action="{{url('produk/filter')}}" method="POST">
+                            @csrf
+                            <div class="form-group">
+                                <label for="" class="control-label"> Nama Tunggal</label>
+                                <input type="text" class="form-control" name="nama" value="{{$nama ??""}}"></input>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label"> Stok </label>
+                                <input type="text" class="form-control" name="stok" value="{{$stok ??""}}"></input>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="control-label"> harga Min </label>
+                                        <input type="text" class="form-control" name="harga_min" value="{{$harga_min ??""}}"></input>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="control-label"> harga Max</label>
+                                        <input type="text" class="form-control" name="harga_max" value="{{$harga_max ??""}}"></input>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-dark float-right"><i class="fa fa-search"></i>
+                                Filter
+                            </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
                             data produk
                             <a href="{{url('kategori/create')}}" class="btn btn-dark float-right" ><i class="fa fa-plus"></i> tambah data</a>
                         </div> 
